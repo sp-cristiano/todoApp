@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../resources/css/todo.css">
+	<title>TODO | HOME</title>
+</head>
+
+<body>
+	<section id="heading">
+		<h1>TODO LIST</h1>
+	</section>
+
+	<section id="optContainer">
+		<div id="opt">
+			<input type="text" placeholder="Todo Name" id="inputTxt" class="p-2" title="Todo" name="inputTxt">
+			<input type="date" name="date" id="date" title="Date">
+			<input type="time" name="time" id="time" title="Time">
+		</div>
+		<div id="addBtnContainer">
+			<button id="addTodoBtn" onclick="addTodo()" title="Add Todo" name="addTodoBtn">Add</button>
+			<button id="updateTodoBtn" name="updateTodoBtn" onclick="updateTodo(`${index}`)"
+				title="Update Todo">update</button>
+		</div>
+	</section>
+
+	<section id="allTasks">
+		<div id="tasks" class="task"></div>
+	</section>
+	<script src="../resources/js/todo.js">
+	</script>
+</body>
+
+</html>

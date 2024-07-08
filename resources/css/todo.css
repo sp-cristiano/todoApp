@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#heading {
+  width: 100%;
+  background-color: #e0dfdf;
+  text-align: center;
+  padding: 1rem;
+}
+#optContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+  /* border: solid blue 2px; */
+}
+#optContainer #opt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#optContainer #opt #inputTxt,
+#optContainer #opt #date,
+#opt #time {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: solid 0.3rem #e0dfdf;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  /* transition:all 0.3s ease-in; */
+}
+#optContainer #opt #inputTxt:hover,
+#optContainer #opt #date:hover,
+#opt #time:hover {
+  border: solid 0.3rem #32993286;
+  /* transition:all 0.2s ease-in; */
+}
+#optContainer #opt #inputTxt:focus-within,
+#optContainer #opt #date:focus-within,
+#opt #time:focus-within {
+  color: green;
+  border: solid 0.3rem #32993286;
+  /* transition:all 0.5s ease; */
+}
+
+#optContainer #addBtnContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+#optContainer #addBtnContainer button {
+  padding: 0.8rem 3rem;
+  border-radius: 0.8rem;
+  background: #055c05;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: larger;
+  cursor: pointer;
+  /* transition: all 0.2s ease-in-out; */
+}
+#optContainer #addBtnContainer button:hover {
+  background-color: #32993286;
+  /* transition: all 0.3s ease-in-out; */
+  color: rgb(29, 2, 2);
+}
+
+section#allTasks {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0.5rem; */
+  /* border: solid red; */
+  max-height: 40vh;
+  overflow-y: scroll;
+  /* scrollbar-color: #32993286; */
+  /* scroll-behavior: smooth; */
+  /* scrollbar-gutter: auto; */
+  /* scrollbar-track-color: #055c05; */
+  /* scrollbar-color: #32993286; */
+}
+section#allTasks .task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#allTasks .task .itemContainer {
+  /* border: solid 0.2rem rgb(15, 138, 138); */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  /* width: 100%; */
+  /* border-top: 0.2rem solid  transparent ; */
+  /* border-bottom: 0.2rem solid transparent; */
+  /* margin-bottom: 0.2rem; */
+  /* transition: all 0.3 ease-in-out; */
+
+  /* padding: 0.2rem; */
+  /* flex-wrap: wrap; */
+}
+section#allTasks .task .itemContainer:hover {
+  /* border-top: 0.2rem solid #635e5e3d ; */
+  /* border-bottom: 0.2rem solid #635e5e3d; */
+  /* margin-bottom: 0.2rem; */
+  /* transition: all 0.3s ease-in-out; */
+  background-color: #e0dfdf;
+}
+section#allTasks .task .itemContainer .sno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  /* font-weight: bolder; */
+  padding: 0.5rem;
+  /* text-align: center; */
+  /* margin-right: 0.3rem; */
+}
+
+section#allTasks .task .itemContainer .itemSubContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-right: solid transparent;
+  border-left: solid transparent;
+  padding: 0 0.3rem;
+
+  /* margin-right: 0.3rem; */
+}
+section#allTasks .task .itemContainer:hover .itemSubContainer {
+  border-right: solid #ffffff;
+  border-left: solid #ffffff;
+}
+
+section#allTasks .task .itemContainer .itemSubContainer .todoTaskContainer h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section#allTasks .task .itemContainer .itemSubContainer .startDateContainer {
+  font-style: italic;
+  padding: 0 0.3rem;
+}
+section#allTasks .task .itemContainer .itemSubContainer .startTimeContainer {
+  /* border: solid; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* color: rgb(22, 20, 1); */
+  padding: 0 0.3rem;
+}
+section#allTasks .task .itemContainer:hover .itemSubContainer .dual {
+  color: #055c05;
+  font-weight: bold;
+  transition: all 0.2s in;
+}
+
+.todoTaskContainer {
+  /* border: solid blue ; */
+  /* padding: 0;
+	flex-grow: 1;
+	word-break: break-all;
+	*/
+}
+
+section#allTasks .task .itemContainer .actionContainer {
+  /* border: solid 2px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-grow: 1;; */
+  /* width: 5rem; */
+  /* width: 100%; */
+}
+section#allTasks .task .itemContainer .actionContainer .wide {
+  display: none;
+}
+section#allTasks .task .itemContainer .actionContainer .mobile {
+  padding: 0.3rem 1rem;
+}
+.editMobile {
+  background-color: rgb(255, 255, 0);
+  border-radius: 0.6em;
+  font-weight: bolder;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  border: 0;
+}
+.deleteMobile {
+  background-color: red;
+  border-radius: 0.6em;
+  font-weight: bolder;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  border: 0;
+}
+
+/* .editMobile:hover .deleteMobile{
+	display: none;
+	;
+} */
+.hide {
+  visibility: hidden;
+}
+.show {
+  /* display; */
+}
+#updateTodoBtn {
+  display: none;
+}
